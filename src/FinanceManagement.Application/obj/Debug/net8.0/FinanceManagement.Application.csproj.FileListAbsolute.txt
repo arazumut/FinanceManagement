@@ -1,0 +1,15 @@
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\bin\Debug\net8.0\FinanceManagement.Application.deps.json
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\bin\Debug\net8.0\FinanceManagement.Application.dll
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\bin\Debug\net8.0\FinanceManagement.Application.pdb
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\bin\Debug\net8.0\FinanceManagement.Domain.dll
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\bin\Debug\net8.0\FinanceManagement.Domain.pdb
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\FinanceManagement.Application.csproj.AssemblyReference.cache
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\FinanceManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\FinanceManagement.Application.AssemblyInfoInputs.cache
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\FinanceManagement.Application.AssemblyInfo.cs
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\FinanceManagement.Application.csproj.CoreCompileInputs.cache
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\FinanceM.F2A269C4.Up2Date
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\FinanceManagement.Application.dll
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\refint\FinanceManagement.Application.dll
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\FinanceManagement.Application.pdb
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\ref\FinanceManagement.Application.dll

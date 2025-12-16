@@ -11,15 +11,18 @@
         <div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-md-50 mb-5 mb-xl-10" style="background-color: #F1416C">
             <div class="card-header pt-5">
                 <div class="card-title d-flex flex-column">
-                    <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">@Model.Stats.TotalBalance.ToString("N2") ₺</span>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="ki-outline ki-wallet fs-2hx text-white opacity-50 me-3"></i>
+                        <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">@Model.Stats.TotalBalance.ToString("N2") ₺</span>
+                    </div>
                     <span class="text-white opacity-75 pt-1 fw-semibold fs-6">Toplam Bakiye</span>
                 </div>
             </div>
             <div class="card-body d-flex align-items-end pt-0">
                 <div class="d-flex align-items-center flex-column mt-3 w-100">
                     <div class="d-flex justify-content-between fw-bold fs-6 text-white opacity-75 w-100 mt-auto mb-2">
-                        <span>@Model.Stats.TotalAccounts Hesap</span>
-                        <span>@Model.Stats.TotalTransactions İşlem</span>
+                        <span><i class="ki-outline ki-credit-cart me-1"></i>@Model.Stats.TotalAccounts Hesap</span>
+                        <span><i class="ki-outline ki-arrows-circle me-1"></i>@Model.Stats.TotalTransactions İşlem</span>
                     </div>
                 </div>
             </div>
@@ -28,10 +31,11 @@
     
     <!-- Monthly Income Card -->
     <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
-        <div class="card card-flush h-md-50 mb-5 mb-xl-10">
+        <div class="card card-flush h-md-50 mb-5 mb-xl-10" style="background-color: #E8FFF3">
             <div class="card-header pt-5">
                 <div class="card-title d-flex flex-column">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="ki-outline ki-arrow-up fs-2hx text-success opacity-50 me-3"></i>
                         <span class="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">@Model.Stats.MonthlyIncome.ToString("N2") ₺</span>
                     </div>
                     <span class="text-gray-500 pt-1 fw-semibold fs-6">Aylık Gelir</span>
@@ -45,10 +49,13 @@
     
     <!-- Monthly Expense Card -->
     <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
-        <div class="card card-flush h-md-50 mb-xl-10">
+        <div class="card card-flush h-md-50 mb-xl-10" style="background-color: #FFF5F8">
             <div class="card-header pt-5">
                 <div class="card-title d-flex flex-column">
-                    <span class="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">@Model.Stats.MonthlyExpense.ToString("N2") ₺</span>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="ki-outline ki-arrow-down fs-2hx text-danger opacity-50 me-3"></i>
+                        <span class="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">@Model.Stats.MonthlyExpense.ToString("N2") ₺</span>
+                    </div>
                     <span class="text-gray-500 pt-1 fw-semibold fs-6">Aylık Gider</span>
                 </div>
             </div>
@@ -63,15 +70,18 @@
         <div class="card card-flush h-md-50 mb-xl-10" style="background: linear-gradient(112.14deg, #00D2FF 0%, #3A7BD5 100%)">
             <div class="card-header pt-5">
                 <div class="card-title d-flex flex-column">
-                    <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">@Model.Stats.MonthlyNet.ToString("N2") ₺</span>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="ki-outline ki-chart-line-up fs-2hx text-white opacity-50 me-3"></i>
+                        <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">@Model.Stats.MonthlyNet.ToString("N2") ₺</span>
+                    </div>
                     <span class="text-white opacity-75 pt-1 fw-semibold fs-6">Aylık Net</span>
                 </div>
             </div>
             <div class="card-body d-flex align-items-end pt-0">
                 <div class="d-flex align-items-center flex-column mt-3 w-100">
                     <div class="d-flex justify-content-between fw-bold fs-6 text-white opacity-75 w-100 mt-auto mb-2">
-                        <span>@Model.Stats.TotalCategories Kategori</span>
-                        <span>Bu Ay</span>
+                        <span><i class="ki-outline ki-category me-1"></i>@Model.Stats.TotalCategories Kategori</span>
+                        <span><i class="ki-outline ki-calendar me-1"></i>Bu Ay</span>
                     </div>
                 </div>
             </div>
@@ -88,11 +98,14 @@
         <div class="card card-flush h-xl-100">
             <div class="card-header pt-7">
                 <h3 class="card-title align-items-start flex-column">
-                    <span class="card-label fw-bold text-gray-800">Aylık Gelir/Gider Grafiği</span>
+                    <div class="d-flex align-items-center">
+                        <i class="ki-outline ki-chart-simple fs-2 text-primary me-2"></i>
+                        <span class="card-label fw-bold text-gray-800">Aylık Gelir/Gider Grafiği</span>
+                    </div>
                     <span class="text-gray-500 mt-1 fw-semibold fs-6">Son 6 ay</span>
                 </h3>
                 <div class="card-toolbar">
-                    <a href="/admin/reports" class="btn btn-sm btn-light">Detaylı Rapor</a>
+                    <a href="/admin/reports" class="btn btn-sm btn-light"><i class="ki-outline ki-file-down me-1"></i>Detaylı Rapor</a>
                 </div>
             </div>
             <div class="card-body pt-6">
@@ -106,7 +119,10 @@
         <div class="card card-flush h-xl-100">
             <div class="card-header pt-7">
                 <h3 class="card-title align-items-start flex-column">
-                    <span class="card-label fw-bold text-gray-800">Gider Kategorileri</span>
+                    <div class="d-flex align-items-center">
+                        <i class="ki-outline ki-category fs-2 text-warning me-2"></i>
+                        <span class="card-label fw-bold text-gray-800">Gider Kategorileri</span>
+                    </div>
                     <span class="text-gray-500 mt-1 fw-semibold fs-6">Top 5</span>
                 </h3>
             </div>
@@ -124,11 +140,14 @@
         <div class="card card-flush h-xl-100">
             <div class="card-header pt-7">
                 <h3 class="card-title align-items-start flex-column">
-                    <span class="card-label fw-bold text-gray-800">Son İşlemler</span>
+                    <div class="d-flex align-items-center">
+                        <i class="ki-outline ki-arrows-circle fs-2 text-info me-2"></i>
+                        <span class="card-label fw-bold text-gray-800">Son İşlemler</span>
+                    </div>
                     <span class="text-gray-500 mt-1 fw-semibold fs-6">@Model.RecentTransactions.Count işlem</span>
                 </h3>
                 <div class="card-toolbar">
-                    <a href="/admin/transactions" class="btn btn-sm btn-light">Tümünü Gör</a>
+                    <a href="/admin/transactions" class="btn btn-sm btn-light"><i class="ki-outline ki-eye me-1"></i>Tümünü Gör</a>
                 </div>
             </div>
             <div class="card-body">
@@ -151,7 +170,7 @@
                                         <div class="d-flex align-items-center">
                                             <div class="symbol symbol-45px me-5">
                                                 <span class="symbol-label bg-light-@(transaction.Type == TransactionType.Income ? "success" : "danger") text-@(transaction.Type == TransactionType.Income ? "success" : "danger")">
-                                                    @transaction.CategoryIcon
+                                                    <i class="ki-outline @(string.IsNullOrEmpty(transaction.CategoryIcon) ? "ki-category" : transaction.CategoryIcon) fs-2"></i>
                                                 </span>
                                             </div>
                                             <div class="d-flex justify-content-start flex-column">
@@ -164,10 +183,10 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <span class="badge badge-light-primary">@transaction.CategoryName</span>
+                                        <span class="badge badge-light-primary"><i class="ki-outline ki-category me-1"></i>@transaction.CategoryName</span>
                                     </td>
                                     <td>
-                                        <span class="text-gray-900 fw-bold d-block fs-6">@transaction.AccountName</span>
+                                        <span class="text-gray-900 fw-bold d-block fs-6"><i class="ki-outline ki-wallet me-1 text-gray-500"></i>@transaction.AccountName</span>
                                     </td>
                                     <td>
                                         <span class="text-gray-900 fw-bold d-block fs-6">@transaction.Date.ToString("dd.MM.yyyy")</span>

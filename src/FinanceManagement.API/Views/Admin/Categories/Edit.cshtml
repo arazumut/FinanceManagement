@@ -1,0 +1,112 @@
+@model UpdateCategoryDto
+@{
+    ViewData["Title"] = "Kategori Düzenle";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+            <i class="ki-outline ki-pencil fs-2 text-primary me-2"></i>
+            Kategori Düzenle
+        </h3>
+    </div>
+    
+    <form asp-action="Edit" asp-route-id="@Model.Id" method="post" class="form">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id" />
+        
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+            
+            <!-- Category Name -->
+            <div class="row mb-6">
+                <label class="col-lg-3 col-form-label required fw-semibold fs-6">Kategori Adı</label>
+                <div class="col-lg-9">
+                    <input asp-for="Name" class="form-control form-control-lg form-control-solid" placeholder="Örn: Maaş, Market, Ulaşım" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <!-- Color -->
+            <div class="row mb-6">
+                <label class="col-lg-3 col-form-label required fw-semibold fs-6">Renk</label>
+                <div class="col-lg-9">
+                    <div class="d-flex align-items-center gap-3">
+                        <input asp-for="Color" type="color" class="form-control form-control-color w-100px" />
+                        <input asp-for="Color" type="text" class="form-control form-control-lg form-control-solid" placeholder="#000000" />
+                    </div>
+                    <span asp-validation-for="Color" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <!-- Icon -->
+            <div class="row mb-6">
+                <label class="col-lg-3 col-form-label fw-semibold fs-6">İkon</label>
+                <div class="col-lg-9">
+                    <select asp-for="Icon" class="form-select form-select-lg form-select-solid">
+                        <option value="">Varsayılan (Kategori)</option>
+                        <option value="ki-dollar">💰 Para</option>
+                        <option value="ki-shop">🏪 Alışveriş</option>
+                        <option value="ki-home-2">🏠 Ev</option>
+                        <option value="ki-car">🚗 Ulaşım</option>
+                        <option value="ki-burger-menu">🍔 Yemek</option>
+                        <option value="ki-heart">❤️ Sağlık</option>
+                        <option value="ki-book">📚 Eğitim</option>
+                        <option value="ki-gift">🎁 Hediye</option>
+                        <option value="ki-coffee">☕ Eğlence</option>
+                        <option value="ki-bill">📄 Fatura</option>
+                        <option value="ki-chart-simple">📊 Yatırım</option>
+                        <option value="ki-wallet">👛 Cüzdan</option>
+                    </select>
+                    <span asp-validation-for="Icon" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <!-- Description -->
+            <div class="row mb-6">
+                <label class="col-lg-3 col-form-label fw-semibold fs-6">Açıklama</label>
+                <div class="col-lg-9">
+                    <textarea asp-for="Description" class="form-control form-control-lg form-control-solid" rows="3" placeholder="Kategori hakkında açıklama (opsiyonel)"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <div class="alert alert-info d-flex align-items-center">
+                <i class="ki-outline ki-information-5 fs-2 me-3"></i>
+                <div>
+                    <strong>Not:</strong> Kategori tipi (Gelir/Gider) oluşturulduktan sonra değiştirilemez.
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-footer d-flex justify-content-end py-6 px-9">
+            <a href="/admin/categories" class="btn btn-light btn-active-light-primary me-2">
+                <i class="ki-outline ki-cross fs-2"></i>
+                İptal
+            </a>
+            <button type="submit" class="btn btn-primary">
+                <i class="ki-outline ki-check fs-2"></i>
+                Güncelle
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        // Sync color inputs
+        const colorPicker = document.querySelector('input[type="color"]');
+        const colorText = document.querySelector('input[type="text"][name="Color"]');
+        
+        colorPicker.addEventListener('input', function() {
+            colorText.value = this.value;
+        });
+        
+        colorText.addEventListener('input', function() {
+            if (/^#[0-9A-F]{6}$/i.test(this.value)) {
+                colorPicker.value = this.value;
+            }
+        });
+    </script>
+}

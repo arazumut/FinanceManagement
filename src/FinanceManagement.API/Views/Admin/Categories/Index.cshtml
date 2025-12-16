@@ -1,0 +1,185 @@
+@model List<CategoryDto>
+@using FinanceManagement.Domain.Enums
+@{
+    ViewData["Title"] = "Kategoriler";
+    var filterType = ViewBag.FilterType as TransactionType?;
+}
+
+<!-- Success/Error Messages -->
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="ki-outline ki-check-circle fs-2 me-2"></i>
+        @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <i class="ki-outline ki-cross-circle fs-2 me-2"></i>
+        @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<!-- Categories Card -->
+<div class="card">
+    <div class="card-header border-0 pt-6">
+        <div class="card-title">
+            <div class="d-flex align-items-center gap-2">
+                <div class="d-flex align-items-center position-relative">
+                    <i class="ki-outline ki-magnifier fs-3 position-absolute ms-5"></i>
+                    <input type="text" id="searchInput" class="form-control form-control-solid w-250px ps-13" placeholder="Kategori Ara..." />
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="btn-group" role="group">
+                    <a href="/admin/categories" class="btn btn-sm @(filterType == null ? "btn-primary" : "btn-light")">
+                        Tümü
+                    </a>
+                    <a href="/admin/categories?type=@((int)TransactionType.Income)" class="btn btn-sm @(filterType == TransactionType.Income ? "btn-success" : "btn-light")">
+                        <i class="ki-outline ki-arrow-up fs-4"></i> Gelir
+                    </a>
+                    <a href="/admin/categories?type=@((int)TransactionType.Expense)" class="btn btn-sm @(filterType == TransactionType.Expense ? "btn-danger" : "btn-light")">
+                        <i class="ki-outline ki-arrow-down fs-4"></i> Gider
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-toolbar">
+            <a href="/admin/categories/create" class="btn btn-primary">
+                <i class="ki-outline ki-plus fs-2"></i>
+                Yeni Kategori
+            </a>
+        </div>
+    </div>
+    
+    <div class="card-body pt-0">
+        @if (Model == null || !Model.Any())
+        {
+            <div class="text-center py-10">
+                <i class="ki-outline ki-category fs-5x text-gray-400 mb-5"></i>
+                <h3 class="text-gray-600">Henüz kategori eklenmemiş</h3>
+                <p class="text-gray-500">Yeni bir kategori eklemek için yukarıdaki butonu kullanın</p>
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table align-middle table-row-dashed fs-6 gy-5" id="categoriesTable">
+                    <thead>
+                        <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+                            <th class="min-w-200px">Kategori Adı</th>
+                            <th class="min-w-100px">Tip</th>
+                            <th class="min-w-100px">Renk</th>
+                            <th class="min-w-150px">Açıklama</th>
+                            <th class="min-w-125px">Oluşturma Tarihi</th>
+                            <th class="text-end min-w-100px">İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 fw-semibold">
+                        @foreach (var category in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="symbol symbol-45px me-5">
+                                            <span class="symbol-label" style="background-color: @category.Color">
+                                                <i class="ki-outline @(string.IsNullOrEmpty(category.Icon) ? "ki-category" : category.Icon) fs-2 text-white"></i>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-start flex-column">
+                                            <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-6">@category.Name</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    @if (category.Type == TransactionType.Income)
+                                    {
+                                        <span class="badge badge-light-success">
+                                            <i class="ki-outline ki-arrow-up fs-4"></i> Gelir
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge badge-light-danger">
+                                            <i class="ki-outline ki-arrow-down fs-4"></i> Gider
+                                        </span>
+                                    }
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="w-30px h-30px rounded" style="background-color: @category.Color"></div>
+                                        <span class="text-gray-600">@category.Color</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(category.Description))
+                                    {
+                                        <span class="text-gray-600">@category.Description</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-gray-400">-</span>
+                                    }
+                                </td>
+                                <td>@category.CreatedAt.ToString("dd.MM.yyyy HH:mm")</td>
+                                <td class="text-end">
+                                    <a href="/admin/categories/edit/@category.Id" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
+                                        <i class="ki-outline ki-pencil fs-2"></i>
+                                    </a>
+                                    <button type="button" class="btn btn-icon btn-bg-light btn-active-color-danger btn-sm" 
+                                            onclick="deleteCategory('@category.Id', '@category.Name')">
+                                        <i class="ki-outline ki-trash fs-2"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Delete Form (Hidden) -->
+<form id="deleteForm" method="post" style="display: none;">
+    @Html.AntiForgeryToken()
+</form>
+
+@section Scripts {
+    <script>
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const searchValue = this.value.toLowerCase();
+            const tableRows = document.querySelectorAll('#categoriesTable tbody tr');
+            
+            tableRows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(searchValue) ? '' : 'none';
+            });
+        });
+
+        // Delete category
+        function deleteCategory(id, name) {
+            Swal.fire({
+                title: 'Emin misiniz?',
+                text: `"${name}" kategorisini silmek istediğinizden emin misiniz?`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Evet, Sil!',
+                cancelButtonText: 'İptal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const form = document.getElementById('deleteForm');
+                    form.action = `/admin/categories/delete/${id}`;
+                    form.submit();
+                }
+            });
+        }
+    </script>
+}

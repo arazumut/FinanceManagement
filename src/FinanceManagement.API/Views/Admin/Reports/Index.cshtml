@@ -1,0 +1,174 @@
+@model DashboardDto
+@{
+    ViewData["Title"] = "Gelir/Gider Raporları";
+    var startDate = ViewBag.StartDate as DateTime?;
+    var endDate = ViewBag.EndDate as DateTime?;
+}
+
+<!-- Date Range Filter -->
+<div class="card mb-5">
+    <div class="card-body">
+        <form method="get" action="/admin/reports" class="row g-3 align-items-end">
+            <div class="col-md-4">
+                <label class="form-label fw-semibold">Başlangıç Tarihi</label>
+                <input type="date" name="startDate" class="form-control" value="@startDate?.ToString("yyyy-MM-dd")" />
+            </div>
+            <div class="col-md-4">
+                <label class="form-label fw-semibold">Bitiş Tarihi</label>
+                <input type="date" name="endDate" class="form-control" value="@endDate?.ToString("yyyy-MM-dd")" />
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="ki-outline ki-filter fs-2"></i> Filtrele
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Summary Cards -->
+<div class="row g-5 mb-5">
+    <div class="col-md-4">
+        <div class="card bg-light-success">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <i class="ki-outline ki-arrow-up fs-3x text-success me-5"></i>
+                    <div>
+                        <h3 class="text-success mb-1">@Model.Stats.MonthlyIncome.ToString("N2") ₺</h3>
+                        <span class="text-gray-600 fw-semibold">Toplam Gelir</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-light-danger">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <i class="ki-outline ki-arrow-down fs-3x text-danger me-5"></i>
+                    <div>
+                        <h3 class="text-danger mb-1">@Model.Stats.MonthlyExpense.ToString("N2") ₺</h3>
+                        <span class="text-gray-600 fw-semibold">Toplam Gider</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-light-primary">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <i class="ki-outline ki-chart-line-up fs-3x text-primary me-5"></i>
+                    <div>
+                        <h3 class="text-primary mb-1">@Model.Stats.MonthlyNet.ToString("N2") ₺</h3>
+                        <span class="text-gray-600 fw-semibold">Net Bakiye</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts -->
+<div class="row g-5">
+    <div class="col-xl-8">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="ki-outline ki-chart-simple fs-2 text-primary me-2"></i>
+                    Aylık Gelir/Gider Grafiği
+                </h3>
+            </div>
+            <div class="card-body">
+                <div id="monthlyChart" style="height: 400px"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="ki-outline ki-category fs-2 text-warning me-2"></i>
+                    Kategori Dağılımı
+                </h3>
+            </div>
+            <div class="card-body">
+                <div id="categoryChart" style="height: 400px"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        // Monthly Chart
+        var monthlyData = @Html.Raw(Json.Serialize(Model.MonthlyReports));
+        
+        var monthlyOptions = {
+            series: [{
+                name: 'Gelir',
+                data: monthlyData.map(m => m.totalIncome)
+            }, {
+                name: 'Gider',
+                data: monthlyData.map(m => m.totalExpense)
+            }],
+            chart: {
+                type: 'bar',
+                height: 400,
+                toolbar: { show: false }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '55%',
+                    endingShape: 'rounded'
+                },
+            },
+            dataLabels: { enabled: false },
+            xaxis: {
+                categories: monthlyData.map(m => m.monthName),
+            },
+            yaxis: {
+                title: { text: 'Tutar (₺)' }
+            },
+            colors: ['#50CD89', '#F1416C'],
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toLocaleString('tr-TR', { minimumFractionDigits: 2 }) + " ₺"
+                    }
+                }
+            }
+        };
+        
+        var monthlyChart = new ApexCharts(document.querySelector("#monthlyChart"), monthlyOptions);
+        monthlyChart.render();
+        
+        // Category Chart
+        var categoryData = @Html.Raw(Json.Serialize(Model.TopExpenseCategories));
+        
+        var categoryOptions = {
+            series: categoryData.map(c => c.totalAmount),
+            chart: {
+                type: 'donut',
+                height: 400
+            },
+            labels: categoryData.map(c => c.categoryName),
+            colors: categoryData.map(c => c.categoryColor),
+            legend: {
+                position: 'bottom'
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toLocaleString('tr-TR', { minimumFractionDigits: 2 }) + " ₺"
+                    }
+                }
+            }
+        };
+        
+        var categoryChart = new ApexCharts(document.querySelector("#categoryChart"), categoryOptions);
+        categoryChart.render();
+    </script>
+}

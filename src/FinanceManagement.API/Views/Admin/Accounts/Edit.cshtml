@@ -1,0 +1,62 @@
+@model UpdateAccountDto
+@{
+    ViewData["Title"] = "Hesap Düzenle";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+            <i class="ki-outline ki-pencil fs-2 text-primary me-2"></i>
+            Hesap Düzenle
+        </h3>
+    </div>
+    
+    <form asp-action="Edit" asp-route-id="@Model.Id" method="post" class="form">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id" />
+        
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+            
+            <!-- Account Name -->
+            <div class="row mb-6">
+                <label class="col-lg-3 col-form-label required fw-semibold fs-6">Hesap Adı</label>
+                <div class="col-lg-9">
+                    <input asp-for="Name" class="form-control form-control-lg form-control-solid" placeholder="Örn: Banka Hesabı, Nakit" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <!-- Description -->
+            <div class="row mb-6">
+                <label class="col-lg-3 col-form-label fw-semibold fs-6">Açıklama</label>
+                <div class="col-lg-9">
+                    <textarea asp-for="Description" class="form-control form-control-lg form-control-solid" rows="3" placeholder="Hesap hakkında açıklama (opsiyonel)"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <div class="alert alert-info d-flex align-items-center">
+                <i class="ki-outline ki-information-5 fs-2 me-3"></i>
+                <div>
+                    <strong>Not:</strong> Hesap bakiyesi ve para birimi işlemler üzerinden otomatik olarak güncellenir.
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-footer d-flex justify-content-end py-6 px-9">
+            <a href="/admin/accounts" class="btn btn-light btn-active-light-primary me-2">
+                <i class="ki-outline ki-cross fs-2"></i>
+                İptal
+            </a>
+            <button type="submit" class="btn btn-primary">
+                <i class="ki-outline ki-check fs-2"></i>
+                Güncelle
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

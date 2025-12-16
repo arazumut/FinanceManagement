@@ -1,0 +1,152 @@
+@model List<AccountDto>
+@{
+    ViewData["Title"] = "Hesaplar";
+}
+
+<!-- Success/Error Messages -->
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="ki-outline ki-check-circle fs-2 me-2"></i>
+        @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <i class="ki-outline ki-cross-circle fs-2 me-2"></i>
+        @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<!-- Accounts Card -->
+<div class="card">
+    <div class="card-header border-0 pt-6">
+        <div class="card-title">
+            <div class="d-flex align-items-center position-relative my-1">
+                <i class="ki-outline ki-magnifier fs-3 position-absolute ms-5"></i>
+                <input type="text" id="searchInput" class="form-control form-control-solid w-250px ps-13" placeholder="Hesap Ara..." />
+            </div>
+        </div>
+        <div class="card-toolbar">
+            <a href="/admin/accounts/create" class="btn btn-primary">
+                <i class="ki-outline ki-plus fs-2"></i>
+                Yeni Hesap
+            </a>
+        </div>
+    </div>
+    
+    <div class="card-body pt-0">
+        @if (Model == null || !Model.Any())
+        {
+            <div class="text-center py-10">
+                <i class="ki-outline ki-wallet fs-5x text-gray-400 mb-5"></i>
+                <h3 class="text-gray-600">Henüz hesap eklenmemiş</h3>
+                <p class="text-gray-500">Yeni bir hesap eklemek için yukarıdaki butonu kullanın</p>
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table align-middle table-row-dashed fs-6 gy-5" id="accountsTable">
+                    <thead>
+                        <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+                            <th class="min-w-200px">Hesap Adı</th>
+                            <th class="min-w-125px">Bakiye</th>
+                            <th class="min-w-100px">Para Birimi</th>
+                            <th class="min-w-150px">Açıklama</th>
+                            <th class="min-w-125px">Oluşturma Tarihi</th>
+                            <th class="text-end min-w-100px">İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 fw-semibold">
+                        @foreach (var account in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="symbol symbol-45px me-5">
+                                            <span class="symbol-label bg-light-primary text-primary">
+                                                <i class="ki-outline ki-wallet fs-2"></i>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-start flex-column">
+                                            <a href="#" class="text-gray-900 fw-bold text-hover-primary fs-6">@account.Name</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="badge badge-light-success fs-7 fw-bold">@account.Balance.ToString("N2") ₺</span>
+                                </td>
+                                <td>@account.Currency</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(account.Description))
+                                    {
+                                        <span class="text-gray-600">@account.Description</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-gray-400">-</span>
+                                    }
+                                </td>
+                                <td>@account.CreatedAt.ToString("dd.MM.yyyy HH:mm")</td>
+                                <td class="text-end">
+                                    <a href="/admin/accounts/edit/@account.Id" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
+                                        <i class="ki-outline ki-pencil fs-2"></i>
+                                    </a>
+                                    <button type="button" class="btn btn-icon btn-bg-light btn-active-color-danger btn-sm" 
+                                            onclick="deleteAccount('@account.Id', '@account.Name')">
+                                        <i class="ki-outline ki-trash fs-2"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Delete Form (Hidden) -->
+<form id="deleteForm" method="post" style="display: none;">
+    @Html.AntiForgeryToken()
+</form>
+
+@section Scripts {
+    <script>
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const searchValue = this.value.toLowerCase();
+            const tableRows = document.querySelectorAll('#accountsTable tbody tr');
+            
+            tableRows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(searchValue) ? '' : 'none';
+            });
+        });
+
+        // Delete account
+        function deleteAccount(id, name) {
+            Swal.fire({
+                title: 'Emin misiniz?',
+                text: `"${name}" hesabını silmek istediğinizden emin misiniz?`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Evet, Sil!',
+                cancelButtonText: 'İptal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const form = document.getElementById('deleteForm');
+                    form.action = `/admin/accounts/delete/${id}`;
+                    form.submit();
+                }
+            });
+        }
+    </script>
+}

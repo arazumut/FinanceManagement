@@ -1,0 +1,130 @@
+@model DashboardDto
+@{
+    ViewData["Title"] = "Aylık Rapor";
+    var year = ViewBag.Year;
+    var month = ViewBag.Month;
+    var monthName = ViewBag.MonthName;
+}
+
+<div class="card mb-5">
+    <div class="card-header">
+        <h3 class="card-title">
+            <i class="ki-outline ki-calendar fs-2 text-primary me-2"></i>
+            @monthName - Detaylı Rapor
+        </h3>
+        <div class="card-toolbar">
+            <form method="get" action="/admin/reports/monthly" class="d-flex gap-2">
+                <select name="month" class="form-select form-select-sm w-150px">
+                    @for (int i = 1; i <= 12; i++)
+                    {
+                        <option value="@i" @(i == month ? "selected" : "")>
+                            @(new DateTime(2000, i, 1).ToString("MMMM", new System.Globalization.CultureInfo("tr-TR")))
+                        </option>
+                    }
+                </select>
+                <select name="year" class="form-select form-select-sm w-100px">
+                    @for (int y = DateTime.Now.Year; y >= DateTime.Now.Year - 5; y--)
+                    {
+                        <option value="@y" @(y == year ? "selected" : "")>@y</option>
+                    }
+                </select>
+                <button type="submit" class="btn btn-sm btn-primary">Göster</button>
+            </form>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row g-5">
+            <div class="col-md-3">
+                <div class="border border-gray-300 border-dashed rounded p-5">
+                    <div class="d-flex align-items-center">
+                        <i class="ki-outline ki-arrow-up fs-2x text-success me-3"></i>
+                        <div>
+                            <div class="fs-2 fw-bold text-gray-900">@Model.Stats.MonthlyIncome.ToString("N2") ₺</div>
+                            <div class="fs-7 text-gray-600">Gelir</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="border border-gray-300 border-dashed rounded p-5">
+                    <div class="d-flex align-items-center">
+                        <i class="ki-outline ki-arrow-down fs-2x text-danger me-3"></i>
+                        <div>
+                            <div class="fs-2 fw-bold text-gray-900">@Model.Stats.MonthlyExpense.ToString("N2") ₺</div>
+                            <div class="fs-7 text-gray-600">Gider</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="border border-gray-300 border-dashed rounded p-5">
+                    <div class="d-flex align-items-center">
+                        <i class="ki-outline ki-chart-line-up fs-2x text-primary me-3"></i>
+                        <div>
+                            <div class="fs-2 fw-bold text-gray-900">@Model.Stats.MonthlyNet.ToString("N2") ₺</div>
+                            <div class="fs-7 text-gray-600">Net</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="border border-gray-300 border-dashed rounded p-5">
+                    <div class="d-flex align-items-center">
+                        <i class="ki-outline ki-arrows-circle fs-2x text-info me-3"></i>
+                        <div>
+                            <div class="fs-2 fw-bold text-gray-900">@Model.Stats.TotalTransactions</div>
+                            <div class="fs-7 text-gray-600">İşlem</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Transactions -->
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Bu Aydaki İşlemler</h3>
+    </div>
+    <div class="card-body">
+        @if (Model.RecentTransactions.Any())
+        {
+            <div class="table-responsive">
+                <table class="table table-row-bordered align-middle gy-4">
+                    <thead>
+                        <tr class="fw-bold text-muted">
+                            <th>Tarih</th>
+                            <th>Açıklama</th>
+                            <th>Kategori</th>
+                            <th>Hesap</th>
+                            <th class="text-end">Tutar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var transaction in Model.RecentTransactions)
+                        {
+                            <tr>
+                                <td>@transaction.Date.ToString("dd.MM.yyyy")</td>
+                                <td>@transaction.Description</td>
+                                <td><span class="badge badge-light-primary">@transaction.CategoryName</span></td>
+                                <td>@transaction.AccountName</td>
+                                <td class="text-end">
+                                    <span class="text-@(transaction.Type == TransactionType.Income ? "success" : "danger") fw-bold">
+                                        @(transaction.Type == TransactionType.Income ? "+" : "-")@transaction.Amount.ToString("N2") ₺
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <div class="text-center py-10">
+                <p class="text-gray-600">Bu ay için işlem bulunamadı</p>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,139 @@
+@model DashboardDto
+@{
+    ViewData["Title"] = "Kategori Analizi";
+}
+
+<div class="row g-5">
+    <!-- Expense Categories -->
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="ki-outline ki-arrow-down fs-2 text-danger me-2"></i>
+                    Gider Kategorileri
+                </h3>
+            </div>
+            <div class="card-body">
+                <div id="expenseCategoryChart" style="height: 350px"></div>
+                
+                <div class="mt-5">
+                    @foreach (var category in Model.TopExpenseCategories)
+                    {
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="symbol symbol-40px me-4">
+                                <span class="symbol-label" style="background-color: @category.CategoryColor">
+                                    <i class="ki-outline @(string.IsNullOrEmpty(category.CategoryIcon) ? "ki-category" : category.CategoryIcon) fs-2 text-white"></i>
+                                </span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-gray-800">@category.CategoryName</span>
+                                    <span class="text-danger fw-bold">@category.TotalAmount.ToString("N2") ₺</span>
+                                </div>
+                                <div class="progress mt-2" style="height: 6px">
+                                    <div class="progress-bar" role="progressbar" style="width: @category.Percentage%; background-color: @category.CategoryColor"></div>
+                                </div>
+                                <span class="text-muted fs-7">@category.TransactionCount işlem - %@category.Percentage.ToString("N1")</span>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Income Categories -->
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="ki-outline ki-arrow-up fs-2 text-success me-2"></i>
+                    Gelir Kategorileri
+                </h3>
+            </div>
+            <div class="card-body">
+                <div id="incomeCategoryChart" style="height: 350px"></div>
+                
+                <div class="mt-5">
+                    @foreach (var category in Model.TopIncomeCategories)
+                    {
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="symbol symbol-40px me-4">
+                                <span class="symbol-label" style="background-color: @category.CategoryColor">
+                                    <i class="ki-outline @(string.IsNullOrEmpty(category.CategoryIcon) ? "ki-category" : category.CategoryIcon) fs-2 text-white"></i>
+                                </span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-gray-800">@category.CategoryName</span>
+                                    <span class="text-success fw-bold">@category.TotalAmount.ToString("N2") ₺</span>
+                                </div>
+                                <div class="progress mt-2" style="height: 6px">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: @category.Percentage%; background-color: @category.CategoryColor"></div>
+                                </div>
+                                <span class="text-muted fs-7">@category.TransactionCount işlem - %@category.Percentage.ToString("N1")</span>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        // Expense Category Chart
+        var expenseData = @Html.Raw(Json.Serialize(Model.TopExpenseCategories));
+        
+        var expenseOptions = {
+            series: expenseData.map(c => c.totalAmount),
+            chart: {
+                type: 'donut',
+                height: 350
+            },
+            labels: expenseData.map(c => c.categoryName),
+            colors: expenseData.map(c => c.categoryColor),
+            legend: {
+                position: 'bottom'
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toLocaleString('tr-TR', { minimumFractionDigits: 2 }) + " ₺"
+                    }
+                }
+            }
+        };
+        
+        var expenseChart = new ApexCharts(document.querySelector("#expenseCategoryChart"), expenseOptions);
+        expenseChart.render();
+        
+        // Income Category Chart
+        var incomeData = @Html.Raw(Json.Serialize(Model.TopIncomeCategories));
+        
+        var incomeOptions = {
+            series: incomeData.map(c => c.totalAmount),
+            chart: {
+                type: 'donut',
+                height: 350
+            },
+            labels: incomeData.map(c => c.categoryName),
+            colors: incomeData.map(c => c.categoryColor),
+            legend: {
+                position: 'bottom'
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toLocaleString('tr-TR', { minimumFractionDigits: 2 }) + " ₺"
+                    }
+                }
+            }
+        };
+        
+        var incomeChart = new ApexCharts(document.querySelector("#incomeCategoryChart"), incomeOptions);
+        incomeChart.render();
+    </script>
+}

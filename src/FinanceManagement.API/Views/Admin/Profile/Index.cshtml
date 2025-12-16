@@ -1,0 +1,121 @@
+@model ProfileViewModel
+@{
+    ViewData["Title"] = "Profilim";
+}
+
+<!-- Success/Error Messages -->
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="ki-outline ki-check-circle fs-2 me-2"></i>
+        @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <i class="ki-outline ki-cross-circle fs-2 me-2"></i>
+        @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+            <i class="ki-outline ki-user fs-2 text-primary me-2"></i>
+            Profil Bilgileri
+        </h3>
+        <div class="card-toolbar">
+            <a href="/admin/profile/change-password" class="btn btn-sm btn-light-primary">
+                <i class="ki-outline ki-lock fs-2"></i>
+                Şifre Değiştir
+            </a>
+        </div>
+    </div>
+    
+    <form asp-action="Index" method="post" class="form">
+        @Html.AntiForgeryToken()
+        
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+            
+            <!-- Profile Picture Placeholder -->
+            <div class="row mb-10">
+                <div class="col-lg-12 text-center">
+                    <div class="symbol symbol-100px symbol-circle mb-5">
+                        <div class="symbol-label fs-2 fw-semibold bg-primary text-white">
+                            @(Model.FirstName.Substring(0, 1).ToUpper())@(Model.LastName.Substring(0, 1).ToUpper())
+                        </div>
+                    </div>
+                    <h3 class="text-gray-900">@Model.FirstName @Model.LastName</h3>
+                    <span class="text-gray-600">@Model.Email</span>
+                </div>
+            </div>
+            
+            <div class="separator my-10"></div>
+            
+            <!-- First Name -->
+            <div class="row mb-6">
+                <label class="col-lg-3 col-form-label required fw-semibold fs-6">Ad</label>
+                <div class="col-lg-9">
+                    <input asp-for="FirstName" class="form-control form-control-lg form-control-solid" placeholder="Adınız" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <!-- Last Name -->
+            <div class="row mb-6">
+                <label class="col-lg-3 col-form-label required fw-semibold fs-6">Soyad</label>
+                <div class="col-lg-9">
+                    <input asp-for="LastName" class="form-control form-control-lg form-control-solid" placeholder="Soyadınız" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <!-- Email (Read-only) -->
+            <div class="row mb-6">
+                <label class="col-lg-3 col-form-label fw-semibold fs-6">E-posta</label>
+                <div class="col-lg-9">
+                    <input asp-for="Email" class="form-control form-control-lg form-control-solid" readonly />
+                    <div class="form-text">E-posta adresi değiştirilemez</div>
+                </div>
+            </div>
+            
+            <!-- Username (Read-only) -->
+            <div class="row mb-6">
+                <label class="col-lg-3 col-form-label fw-semibold fs-6">Kullanıcı Adı</label>
+                <div class="col-lg-9">
+                    <input asp-for="UserName" class="form-control form-control-lg form-control-solid" readonly />
+                    <div class="form-text">Kullanıcı adı değiştirilemez</div>
+                </div>
+            </div>
+            
+            <!-- Phone Number -->
+            <div class="row mb-6">
+                <label class="col-lg-3 col-form-label fw-semibold fs-6">Telefon</label>
+                <div class="col-lg-9">
+                    <input asp-for="PhoneNumber" type="tel" class="form-control form-control-lg form-control-solid" placeholder="+90 (5XX) XXX XX XX" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-footer d-flex justify-content-end py-6 px-9">
+            <a href="/admin/dashboard" class="btn btn-light btn-active-light-primary me-2">
+                <i class="ki-outline ki-cross fs-2"></i>
+                İptal
+            </a>
+            <button type="submit" class="btn btn-primary">
+                <i class="ki-outline ki-check fs-2"></i>
+                Güncelle
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

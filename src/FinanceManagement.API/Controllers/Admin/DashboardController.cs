@@ -6,8 +6,12 @@ using System.Security.Claims;
 
 namespace FinanceManagement.API.Controllers.Admin;
 
-//[Authorize] // Temporarily disabled for testing
-[Route("admin/[controller]")]
+/// <summary>
+/// Admin Dashboard Controller
+/// Route: /admin/dashboard
+/// </summary>
+[Authorize]
+[Route("admin/dashboard")]
 public class DashboardController : Controller
 {
     private readonly IDashboardService _dashboardService;
@@ -19,29 +23,40 @@ public class DashboardController : Controller
         _logger = logger;
     }
 
-    private string GetUserId() => "b62658b4-b799-46c2-952e-70bbdfbec6dd"; // Test user ID
+    private string GetUserId() => User.FindFirstValue(ClaimTypes.NameIdentifier)!;
 
+    /// <summary>
+    /// GET: /admin/dashboard or /admin/dashboard/index
+    /// Shows the main dashboard
+    /// </summary>
     [HttpGet("")]
-    [HttpGet("Index")]
+    [HttpGet("index")]
     public async Task<IActionResult> Index()
     {
         try
         {
+            var userId = GetUserId();
+            _logger.LogInformation("Dashboard yükleniyor. UserId: {UserId}, User: {UserName}", 
+                userId, User.Identity?.Name ?? "Unknown");
+
             var dateRange = new DateRangeDto();
-            var result = await _dashboardService.GetDashboardAsync(GetUserId(), dateRange);
+            var result = await _dashboardService.GetDashboardAsync(userId, dateRange);
             
             if (!result.Succeeded)
             {
                 _logger.LogError("Dashboard yüklenemedi: {Errors}", string.Join(", ", result.Errors));
-                return Content($"Hata: {string.Join(", ", result.Errors)}");
+                ViewBag.Error = string.Join(", ", result.Errors);
+                return View();
             }
 
+            _logger.LogInformation("✅ Dashboard başarıyla yüklendi");
             return View(result.Data);
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Dashboard yüklenirken exception oluştu");
-            return Content($"Exception: {ex.Message}\n\nStack: {ex.StackTrace}");
+            ViewBag.Error = $"Bir hata oluştu: {ex.Message}";
+            return View();
         }
     }
 }

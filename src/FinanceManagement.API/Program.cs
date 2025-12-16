@@ -39,15 +39,54 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
 .AddEntityFrameworkStores<AppDbContext>()
 .AddDefaultTokenProviders();
 
-// Configure JWT Authentication
+// Configure Authentication (Cookie for Admin Panel + JWT for API)
 var jwtSettings = builder.Configuration.GetSection("Jwt");
 var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]!);
 
-builder.Services.AddAuthentication(options =>
+builder.Services.ConfigureApplicationCookie(options =>
 {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
+    options.Cookie.HttpOnly = true;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+    options.Cookie.SameSite = SameSiteMode.Lax;
+    options.Cookie.Name = "FinanceManagement.Auth";
+    
+    options.LoginPath = "/admin/login";
+    options.LogoutPath = "/admin/logout";
+    options.AccessDeniedPath = "/admin/access-denied";
+    
+    options.ExpireTimeSpan = TimeSpan.FromHours(12);
+    options.SlidingExpiration = true;
+    
+    options.Events.OnRedirectToLogin = context =>
+    {
+        // API istekleri için 401 döndür
+        if (context.Request.Path.StartsWithSegments("/api"))
+        {
+            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            return Task.CompletedTask;
+        }
+        
+        // Admin panel için login sayfasına yönlendir
+        context.Response.Redirect(context.RedirectUri);
+        return Task.CompletedTask;
+    };
+    
+    options.Events.OnRedirectToAccessDenied = context =>
+    {
+        // API istekleri için 403 döndür
+        if (context.Request.Path.StartsWithSegments("/api"))
+        {
+            context.Response.StatusCode = StatusCodes.Status403Forbidden;
+            return Task.CompletedTask;
+        }
+        
+        // Admin panel için access denied sayfasına yönlendir
+        context.Response.Redirect(context.RedirectUri);
+        return Task.CompletedTask;
+    };
+});
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(options =>
 {
     options.RequireHttpsMetadata = false;
@@ -141,34 +180,65 @@ app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
 
-// API Routes
+// API Routes (attribute routing)
 app.MapControllers();
 
-// MVC Routes for Admin Panel
-app.MapControllerRoute(
-    name: "admin",
-    pattern: "admin/{controller=Dashboard}/{action=Index}/{id?}");
-
+// Default route for any potential non-API controllers
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 // Database migration ve seed data
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
+    var logger = services.GetRequiredService<ILogger<Program>>();
+    
     try
     {
+        // Database migration
         var context = services.GetRequiredService<AppDbContext>();
         context.Database.Migrate();
+        logger.LogInformation("✅ Database migrated successfully");
         
-        var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogInformation("Database migrated successfully");
+        // Seed test user
+        var userManager = services.GetRequiredService<UserManager<User>>();
+        var testEmail = "test@example.com";
+        var existingUser = await userManager.FindByEmailAsync(testEmail);
+        
+        if (existingUser == null)
+        {
+            var testUser = new User
+            {
+                UserName = testEmail,
+                Email = testEmail,
+                EmailConfirmed = true,
+                FirstName = "Test",
+                LastName = "User",
+                CreatedAt = DateTime.UtcNow
+            };
+            
+            var result = await userManager.CreateAsync(testUser, "Test123!");
+            
+            if (result.Succeeded)
+            {
+                logger.LogInformation("✅ Test kullanıcısı oluşturuldu: {Email}", testEmail);
+            }
+            else
+            {
+                logger.LogError("❌ Test kullanıcısı oluşturulamadı: {Errors}", 
+                    string.Join(", ", result.Errors.Select(e => e.Description)));
+            }
+        }
+        else
+        {
+            logger.LogInformation("ℹ️ Test kullanıcısı zaten mevcut: {Email}", testEmail);
+        }
     }
     catch (Exception ex)
     {
-        var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "An error occurred while migrating the database");
+        logger.LogError(ex, "❌ Database migration veya seed sırasında hata oluştu");
     }
 }
 

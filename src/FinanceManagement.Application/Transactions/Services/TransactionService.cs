@@ -263,7 +263,8 @@ public class TransactionService : ITransactionService
         if (endDate.HasValue)
             query = query.Where(t => t.Date <= endDate.Value);
 
-        var total = await query.SumAsync(t => t.Amount, cancellationToken);
+        var transactions = await query.ToListAsync(cancellationToken);
+        var total = transactions.Sum(t => t.Amount);
 
         return Result<decimal>.Success(total);
     }
@@ -279,7 +280,8 @@ public class TransactionService : ITransactionService
         if (endDate.HasValue)
             query = query.Where(t => t.Date <= endDate.Value);
 
-        var total = await query.SumAsync(t => t.Amount, cancellationToken);
+        var transactions = await query.ToListAsync(cancellationToken);
+        var total = transactions.Sum(t => t.Amount);
 
         return Result<decimal>.Success(total);
     }

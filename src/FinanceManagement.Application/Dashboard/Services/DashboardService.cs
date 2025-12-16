@@ -103,12 +103,13 @@ public class DashboardService : IDashboardService
         var startOfMonth = new DateTime(now.Year, now.Month, 1);
         var endOfMonth = startOfMonth.AddMonths(1).AddDays(-1);
 
-        var totalBalance = await _context.Accounts
+        // Get all accounts and calculate total balance on client side
+        var accounts = await _context.Accounts
             .Where(a => a.UserId == userId)
-            .SumAsync(a => a.Balance, cancellationToken);
-
-        var totalAccounts = await _context.Accounts
-            .CountAsync(a => a.UserId == userId, cancellationToken);
+            .ToListAsync(cancellationToken);
+        
+        var totalBalance = accounts.Sum(a => a.Balance);
+        var totalAccounts = accounts.Count;
 
         var totalCategories = await _context.Categories
             .CountAsync(c => c.UserId == userId, cancellationToken);
@@ -116,15 +117,18 @@ public class DashboardService : IDashboardService
         var totalTransactions = await _context.Transactions
             .CountAsync(t => t.UserId == userId, cancellationToken);
 
-        var monthlyIncome = await _context.Transactions
-            .Where(t => t.UserId == userId && t.Type == TransactionType.Income && 
-                       t.Date >= startOfMonth && t.Date <= endOfMonth)
-            .SumAsync(t => t.Amount, cancellationToken);
+        // Get monthly transactions and calculate sums on client side
+        var monthlyTransactions = await _context.Transactions
+            .Where(t => t.UserId == userId && t.Date >= startOfMonth && t.Date <= endOfMonth)
+            .ToListAsync(cancellationToken);
 
-        var monthlyExpense = await _context.Transactions
-            .Where(t => t.UserId == userId && t.Type == TransactionType.Expense && 
-                       t.Date >= startOfMonth && t.Date <= endOfMonth)
-            .SumAsync(t => t.Amount, cancellationToken);
+        var monthlyIncome = monthlyTransactions
+            .Where(t => t.Type == TransactionType.Income)
+            .Sum(t => t.Amount);
+
+        var monthlyExpense = monthlyTransactions
+            .Where(t => t.Type == TransactionType.Expense)
+            .Sum(t => t.Amount);
 
         return new DashboardStatsDto
         {
@@ -188,7 +192,10 @@ public class DashboardService : IDashboardService
         if (dateRange.EndDate.HasValue)
             query = query.Where(t => t.Date <= dateRange.EndDate.Value);
 
-        var groupedData = await query
+        // Get all transactions first, then group on client side
+        var transactions = await query.ToListAsync(cancellationToken);
+
+        var groupedData = transactions
             .GroupBy(t => new
             {
                 t.CategoryId,
@@ -206,7 +213,7 @@ public class DashboardService : IDashboardService
                 TransactionCount = g.Count()
             })
             .OrderByDescending(x => x.TotalAmount)
-            .ToListAsync(cancellationToken);
+            .ToList();
 
         var totalAmount = groupedData.Sum(x => x.TotalAmount);
 

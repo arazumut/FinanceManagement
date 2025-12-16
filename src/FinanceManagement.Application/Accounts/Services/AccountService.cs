@@ -103,9 +103,11 @@ public class AccountService : IAccountService
 
     public async Task<Result<decimal>> GetTotalBalanceAsync(string userId, CancellationToken cancellationToken = default)
     {
-        var totalBalance = await _context.Accounts
+        var accounts = await _context.Accounts
             .Where(a => a.UserId == userId)
-            .SumAsync(a => a.Balance, cancellationToken);
+            .ToListAsync(cancellationToken);
+        
+        var totalBalance = accounts.Sum(a => a.Balance);
 
         return Result<decimal>.Success(totalBalance);
     }

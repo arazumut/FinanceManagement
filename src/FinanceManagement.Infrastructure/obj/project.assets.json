@@ -1057,7 +1057,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "FinanceManagement.Domain": "1.0.0"
+          "FinanceManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.11",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
         },
         "compile": {
           "bin/placeholder/FinanceManagement.Application.dll": {}
@@ -2589,7 +2591,8 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.11",
       "Microsoft.EntityFrameworkCore >= 8.0.11",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.11",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.11"
+      "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.11",
+      "Microsoft.Extensions.Configuration.Abstractions >= 8.0.0"
     ]
   },
   "packageFolders": {
@@ -2657,6 +2660,10 @@
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
             "version": "[8.0.11, )"
+          },
+          "Microsoft.Extensions.Configuration.Abstractions": {
+            "target": "Package",
+            "version": "[8.0.0, )"
           }
         },
         "imports": [

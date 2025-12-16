@@ -1,5 +1,7 @@
 using System.Text;
+using FinanceManagement.Application;
 using FinanceManagement.Domain.Entities;
+using FinanceManagement.Infrastructure;
 using FinanceManagement.Infrastructure.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -12,9 +14,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
-// Configure Entity Framework and SQLite
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+// Add Application and Infrastructure layers
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 // Configure Identity
 builder.Services.AddIdentity<User, IdentityRole>(options =>

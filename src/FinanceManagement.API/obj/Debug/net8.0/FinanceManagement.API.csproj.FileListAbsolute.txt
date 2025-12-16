@@ -140,6 +140,7 @@ C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\FinanceManagement.API.csproj.CoreCompileInputs.cache
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\FinanceManagement.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\FinanceManagement.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\FinanceManagement.API.sourcelink.json
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\staticwebassets\msbuild.FinanceManagement.API.Microsoft.AspNetCore.StaticWebAssets.props
@@ -154,4 +155,3 @@ C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\FinanceManagement.API.pdb
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\FinanceManagement.API.genruntimeconfig.cache
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\ref\FinanceManagement.API.dll
-C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\FinanceManagement.API.sourcelink.json

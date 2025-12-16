@@ -11,10 +11,10 @@ C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceManagement.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceManagement.Infrastructure.AssemblyInfo.cs
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceManagement.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceManagement.Infrastructure.sourcelink.json
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceM.8CD3B029.Up2Date
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceManagement.Infrastructure.dll
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\refint\FinanceManagement.Infrastructure.dll
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceManagement.Infrastructure.pdb
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceManagement.Infrastructure.genruntimeconfig.cache
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\ref\FinanceManagement.Infrastructure.dll
-C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceManagement.Infrastructure.sourcelink.json

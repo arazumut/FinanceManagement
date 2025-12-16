@@ -1,10 +1,11 @@
+using FinanceManagement.Application.Common.Interfaces;
 using FinanceManagement.Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FinanceManagement.Infrastructure.Data;
 
-public class AppDbContext : IdentityDbContext<User>
+public class AppDbContext : IdentityDbContext<User>, IApplicationDbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {

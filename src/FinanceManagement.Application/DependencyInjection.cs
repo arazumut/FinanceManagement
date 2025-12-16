@@ -2,6 +2,8 @@ using FinanceManagement.Application.Accounts.Interfaces;
 using FinanceManagement.Application.Accounts.Services;
 using FinanceManagement.Application.Categories.Interfaces;
 using FinanceManagement.Application.Categories.Services;
+using FinanceManagement.Application.Transactions.Interfaces;
+using FinanceManagement.Application.Transactions.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace FinanceManagement.Application;
@@ -13,6 +15,7 @@ public static class DependencyInjection
         // Register services
         services.AddScoped<IAccountService, AccountService>();
         services.AddScoped<ICategoryService, CategoryService>();
+        services.AddScoped<ITransactionService, TransactionService>();
 
         return services;
     }

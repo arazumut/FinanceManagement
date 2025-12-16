@@ -1,0 +1,269 @@
+@model DashboardDto
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<!-- Stats Cards Row -->
+<div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+    
+    <!-- Total Balance Card -->
+    <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
+        <div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-md-50 mb-5 mb-xl-10" style="background-color: #F1416C">
+            <div class="card-header pt-5">
+                <div class="card-title d-flex flex-column">
+                    <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">@Model.Stats.TotalBalance.ToString("N2") ₺</span>
+                    <span class="text-white opacity-75 pt-1 fw-semibold fs-6">Toplam Bakiye</span>
+                </div>
+            </div>
+            <div class="card-body d-flex align-items-end pt-0">
+                <div class="d-flex align-items-center flex-column mt-3 w-100">
+                    <div class="d-flex justify-content-between fw-bold fs-6 text-white opacity-75 w-100 mt-auto mb-2">
+                        <span>@Model.Stats.TotalAccounts Hesap</span>
+                        <span>@Model.Stats.TotalTransactions İşlem</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Monthly Income Card -->
+    <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
+        <div class="card card-flush h-md-50 mb-5 mb-xl-10">
+            <div class="card-header pt-5">
+                <div class="card-title d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                        <span class="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">@Model.Stats.MonthlyIncome.ToString("N2") ₺</span>
+                    </div>
+                    <span class="text-gray-500 pt-1 fw-semibold fs-6">Aylık Gelir</span>
+                </div>
+            </div>
+            <div class="card-body d-flex align-items-end px-0 pb-0">
+                <div id="kt_card_widget_6_chart" class="w-100" style="height: 80px"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Monthly Expense Card -->
+    <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
+        <div class="card card-flush h-md-50 mb-xl-10">
+            <div class="card-header pt-5">
+                <div class="card-title d-flex flex-column">
+                    <span class="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">@Model.Stats.MonthlyExpense.ToString("N2") ₺</span>
+                    <span class="text-gray-500 pt-1 fw-semibold fs-6">Aylık Gider</span>
+                </div>
+            </div>
+            <div class="card-body d-flex align-items-end px-0 pb-0">
+                <div id="kt_card_widget_7_chart" class="w-100" style="height: 80px"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Monthly Net Card -->
+    <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
+        <div class="card card-flush h-md-50 mb-xl-10" style="background: linear-gradient(112.14deg, #00D2FF 0%, #3A7BD5 100%)">
+            <div class="card-header pt-5">
+                <div class="card-title d-flex flex-column">
+                    <span class="fs-2hx fw-bold text-white me-2 lh-1 ls-n2">@Model.Stats.MonthlyNet.ToString("N2") ₺</span>
+                    <span class="text-white opacity-75 pt-1 fw-semibold fs-6">Aylık Net</span>
+                </div>
+            </div>
+            <div class="card-body d-flex align-items-end pt-0">
+                <div class="d-flex align-items-center flex-column mt-3 w-100">
+                    <div class="d-flex justify-content-between fw-bold fs-6 text-white opacity-75 w-100 mt-auto mb-2">
+                        <span>@Model.Stats.TotalCategories Kategori</span>
+                        <span>Bu Ay</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Charts Row -->
+<div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+    
+    <!-- Monthly Report Chart -->
+    <div class="col-xl-8">
+        <div class="card card-flush h-xl-100">
+            <div class="card-header pt-7">
+                <h3 class="card-title align-items-start flex-column">
+                    <span class="card-label fw-bold text-gray-800">Aylık Gelir/Gider Grafiği</span>
+                    <span class="text-gray-500 mt-1 fw-semibold fs-6">Son 6 ay</span>
+                </h3>
+                <div class="card-toolbar">
+                    <a href="/admin/reports" class="btn btn-sm btn-light">Detaylı Rapor</a>
+                </div>
+            </div>
+            <div class="card-body pt-6">
+                <div id="kt_charts_widget_monthly" style="height: 350px"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Category Analysis -->
+    <div class="col-xl-4">
+        <div class="card card-flush h-xl-100">
+            <div class="card-header pt-7">
+                <h3 class="card-title align-items-start flex-column">
+                    <span class="card-label fw-bold text-gray-800">Gider Kategorileri</span>
+                    <span class="text-gray-500 mt-1 fw-semibold fs-6">Top 5</span>
+                </h3>
+            </div>
+            <div class="card-body pt-6">
+                <div id="kt_charts_widget_category" style="height: 350px"></div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Recent Transactions -->
+<div class="row g-5 g-xl-10">
+    <div class="col-xl-12">
+        <div class="card card-flush h-xl-100">
+            <div class="card-header pt-7">
+                <h3 class="card-title align-items-start flex-column">
+                    <span class="card-label fw-bold text-gray-800">Son İşlemler</span>
+                    <span class="text-gray-500 mt-1 fw-semibold fs-6">@Model.RecentTransactions.Count işlem</span>
+                </h3>
+                <div class="card-toolbar">
+                    <a href="/admin/transactions" class="btn btn-sm btn-light">Tümünü Gör</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3">
+                        <thead>
+                            <tr class="fw-bold text-muted">
+                                <th class="min-w-150px">Açıklama</th>
+                                <th class="min-w-120px">Kategori</th>
+                                <th class="min-w-120px">Hesap</th>
+                                <th class="min-w-120px">Tarih</th>
+                                <th class="min-w-100px text-end">Tutar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var transaction in Model.RecentTransactions)
+                            {
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="symbol symbol-45px me-5">
+                                                <span class="symbol-label bg-light-@(transaction.Type == TransactionType.Income ? "success" : "danger") text-@(transaction.Type == TransactionType.Income ? "success" : "danger")">
+                                                    @transaction.CategoryIcon
+                                                </span>
+                                            </div>
+                                            <div class="d-flex justify-content-start flex-column">
+                                                <a href="#" class="text-gray-900 fw-bold text-hover-primary mb-1 fs-6">@transaction.Description</a>
+                                                @if (!string.IsNullOrEmpty(transaction.Notes))
+                                                {
+                                                    <span class="text-muted fw-semibold text-muted d-block fs-7">@transaction.Notes</span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-light-primary">@transaction.CategoryName</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-gray-900 fw-bold d-block fs-6">@transaction.AccountName</span>
+                                    </td>
+                                    <td>
+                                        <span class="text-gray-900 fw-bold d-block fs-6">@transaction.Date.ToString("dd.MM.yyyy")</span>
+                                        <span class="text-muted fw-semibold d-block fs-7">@transaction.Date.ToString("HH:mm")</span>
+                                    </td>
+                                    <td class="text-end">
+                                        <span class="text-@(transaction.Type == TransactionType.Income ? "success" : "danger") fw-bold fs-6">
+                                            @(transaction.Type == TransactionType.Income ? "+" : "-")@transaction.Amount.ToString("N2") ₺
+                                        </span>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        // Monthly Income/Expense Chart
+        var monthlyData = @Html.Raw(Json.Serialize(Model.MonthlyReports));
+        
+        var monthlyOptions = {
+            series: [{
+                name: 'Gelir',
+                data: monthlyData.map(m => m.totalIncome)
+            }, {
+                name: 'Gider',
+                data: monthlyData.map(m => m.totalExpense)
+            }],
+            chart: {
+                type: 'bar',
+                height: 350,
+                toolbar: { show: false }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '55%',
+                    endingShape: 'rounded'
+                },
+            },
+            dataLabels: { enabled: false },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            xaxis: {
+                categories: monthlyData.map(m => m.monthName),
+            },
+            yaxis: {
+                title: { text: 'Tutar (₺)' }
+            },
+            fill: { opacity: 1 },
+            colors: ['#50CD89', '#F1416C'],
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toLocaleString('tr-TR', { minimumFractionDigits: 2 }) + " ₺"
+                    }
+                }
+            }
+        };
+        
+        var monthlyChart = new ApexCharts(document.querySelector("#kt_charts_widget_monthly"), monthlyOptions);
+        monthlyChart.render();
+        
+        // Category Pie Chart
+        var categoryData = @Html.Raw(Json.Serialize(Model.TopExpenseCategories));
+        
+        var categoryOptions = {
+            series: categoryData.map(c => c.totalAmount),
+            chart: {
+                type: 'donut',
+                height: 350
+            },
+            labels: categoryData.map(c => c.categoryName),
+            colors: categoryData.map(c => c.categoryColor),
+            legend: {
+                position: 'bottom'
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toLocaleString('tr-TR', { minimumFractionDigits: 2 }) + " ₺"
+                    }
+                }
+            }
+        };
+        
+        var categoryChart = new ApexCharts(document.querySelector("#kt_charts_widget_category"), categoryOptions);
+        categoryChart.render();
+    </script>
+}

@@ -12,7 +12,8 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllersWithViews(); // MVC support
+builder.Services.AddRazorPages(); // Razor Pages support
 
 // Add Application and Infrastructure layers
 builder.Services.AddApplication();
@@ -132,12 +133,25 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Static files for admin panel
+app.UseStaticFiles();
+
 app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();
 
+// API Routes
 app.MapControllers();
+
+// MVC Routes for Admin Panel
+app.MapControllerRoute(
+    name: "admin",
+    pattern: "admin/{controller=Dashboard}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 // Database migration ve seed data
 using (var scope = app.Services.CreateScope())

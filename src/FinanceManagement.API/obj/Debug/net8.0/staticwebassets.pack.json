@@ -1,0 +1,1017 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\css\\style.bundle.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.bundle.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\account\\api-keys\\api-keys.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\account\\api-keys\\api-keys.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\account\\billing\\general.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\account\\billing\\general.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\account\\orders\\classic.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\account\\orders\\classic.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\account\\referrals\\referral-program.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\account\\referrals\\referral-program.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\account\\security\\license-usage.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\account\\security\\license-usage.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\account\\security\\security-summary.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\account\\security\\security-summary.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\account\\settings\\deactivate-account.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\account\\settings\\deactivate-account.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\account\\settings\\overview.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\account\\settings\\overview.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\account\\settings\\profile-details.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\account\\settings\\profile-details.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\account\\settings\\signin-methods.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\account\\settings\\signin-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\calendar\\calendar.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\calendar\\calendar.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\chat\\chat.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\chat\\chat.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\contacts\\edit-contact.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\contacts\\edit-contact.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\contacts\\view-contact.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\contacts\\view-contact.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\customers\\add.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\customers\\add.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\customers\\list\\export.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\customers\\list\\export.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\customers\\list\\list.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\customers\\list\\list.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\customers\\update.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\customers\\update.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\customers\\view\\add-payment.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\customers\\view\\add-payment.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\customers\\view\\adjust-balance.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\customers\\view\\adjust-balance.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\customers\\view\\invoices.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\customers\\view\\invoices.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\customers\\view\\payment-method.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\customers\\view\\payment-method.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\customers\\view\\payment-table.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\customers\\view\\payment-table.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\customers\\view\\statement.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\customers\\view\\statement.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\catalog\\categories.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\catalog\\categories.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\catalog\\products.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\catalog\\products.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\catalog\\save-category.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\catalog\\save-category.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\catalog\\save-product.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\catalog\\save-product.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\add-address.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\add-address.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\add-auth-app.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\add-auth-app.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\add-one-time-password.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\add-one-time-password.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\payment-method.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\payment-method.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\transaction-history.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\transaction-history.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\update-address.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\update-address.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\update-password.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\update-password.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\update-phone.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\update-phone.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\update-profile.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\details\\update-profile.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\listing\\add.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\listing\\add.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\listing\\export.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\listing\\export.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\customers\\listing\\listing.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\customers\\listing\\listing.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\reports\\customer-orders\\customer-orders.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\reports\\customer-orders\\customer-orders.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\reports\\returns\\returns.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\reports\\returns\\returns.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\reports\\sales\\sales.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\reports\\sales\\sales.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\reports\\shipping\\shipping.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\reports\\shipping\\shipping.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\reports\\views\\views.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\reports\\views\\views.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\sales\\listing.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\sales\\listing.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\sales\\save-order.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\sales\\save-order.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\ecommerce\\settings\\settings.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\ecommerce\\settings\\settings.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\file-manager\\list.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\file-manager\\list.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\file-manager\\settings.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\file-manager\\settings.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\inbox\\compose.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\inbox\\compose.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\inbox\\listing.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\inbox\\listing.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\inbox\\reply.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\inbox\\reply.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\invoices\\create.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\invoices\\create.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\projects\\list\\list.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\projects\\list\\list.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\projects\\project\\project.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\projects\\project\\project.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\projects\\settings\\settings.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\projects\\settings\\settings.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\projects\\targets\\targets.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\projects\\targets\\targets.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\projects\\users\\users.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\projects\\users\\users.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\subscriptions\\add\\advanced.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\subscriptions\\add\\advanced.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\subscriptions\\add\\customer-select.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\subscriptions\\add\\customer-select.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\subscriptions\\add\\products.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\subscriptions\\add\\products.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\subscriptions\\list\\export.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\subscriptions\\list\\export.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\subscriptions\\list\\list.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\subscriptions\\list\\list.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\support-center\\general.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\support-center\\general.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\support-center\\tickets\\create.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\support-center\\tickets\\create.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\permissions\\add-permission.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\permissions\\add-permission.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\permissions\\list.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\permissions\\list.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\permissions\\update-permission.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\permissions\\update-permission.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\roles\\list\\add.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\roles\\list\\add.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\roles\\list\\update-role.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\roles\\list\\update-role.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\roles\\view\\update-role.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\roles\\view\\update-role.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\roles\\view\\view.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\roles\\view\\view.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\list\\add.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\list\\add.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\list\\export-users.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\list\\export-users.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\list\\table.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\list\\table.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\view\\add-auth-app.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\view\\add-auth-app.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\view\\add-one-time-password.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\view\\add-one-time-password.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\view\\add-schedule.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\view\\add-schedule.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\view\\add-task.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\view\\add-task.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\view\\update-details.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\view\\update-details.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\view\\update-email.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\view\\update-email.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\view\\update-password.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\view\\update-password.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\view\\update-role.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\view\\update-role.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\apps\\user-management\\users\\view\\view.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\apps\\user-management\\users\\view\\view.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\authentication\\reset-password\\new-password.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\authentication\\reset-password\\new-password.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\authentication\\reset-password\\reset-password.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\authentication\\reset-password\\reset-password.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\authentication\\sign-in\\general.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\authentication\\sign-in\\general.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\authentication\\sign-in\\i18n.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\authentication\\sign-in\\i18n.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\authentication\\sign-in\\two-factor.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\authentication\\sign-in\\two-factor.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\authentication\\sign-up\\coming-soon.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\authentication\\sign-up\\coming-soon.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\authentication\\sign-up\\free-trial.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\authentication\\sign-up\\free-trial.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\authentication\\sign-up\\general.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\authentication\\sign-up\\general.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\documentation\\documentation.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\documentation\\documentation.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\documentation\\search.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\documentation\\search.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\documents\\pdf-viewer.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\documents\\pdf-viewer.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\landing.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\landing.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\layout-builder\\layout-builder.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\layout-builder\\layout-builder.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\pages\\careers\\apply.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\pages\\careers\\apply.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\pages\\general\\contact.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\pages\\general\\contact.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\pages\\general\\pos.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\pages\\general\\pos.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\pages\\pricing\\general.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\pages\\pricing\\general.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\pages\\social\\feeds.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\pages\\social\\feeds.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\pages\\testimonials\\testimonials-1.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\pages\\testimonials\\testimonials-1.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\pages\\user-profile\\general.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\pages\\user-profile\\general.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\bidding.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\bidding.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-account.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-account.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-api-key.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-api-key.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-app.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-app.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-campaign.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-campaign.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-project\\budget.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-project\\budget.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-project\\complete.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-project\\complete.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-project\\files.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-project\\files.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-project\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-project\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-project\\settings.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-project\\settings.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-project\\targets.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-project\\targets.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-project\\team.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-project\\team.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\create-project\\type.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\create-project\\type.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\new-address.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\new-address.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\new-card.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\new-card.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\new-target.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\new-target.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\offer-a-deal\\complete.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\offer-a-deal\\complete.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\offer-a-deal\\details.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\offer-a-deal\\details.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\offer-a-deal\\finance.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\offer-a-deal\\finance.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\offer-a-deal\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\offer-a-deal\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\offer-a-deal\\type.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\offer-a-deal\\type.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\select-location.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\select-location.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\share-earn.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\share-earn.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\top-up-wallet.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\top-up-wallet.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\two-factor-authentication.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\two-factor-authentication.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\upgrade-plan.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\upgrade-plan.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\modals\\users-search.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\modals\\users-search.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\utilities\\search\\horizontal.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\utilities\\search\\horizontal.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\custom\\widgets.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom\\widgets.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\scripts.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\js\\scripts.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\js\\widgets.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\js\\widgets.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\ckeditor\\ckeditor-balloon-block.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\ckeditor\\ckeditor-balloon-block.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\ckeditor\\ckeditor-balloon.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\ckeditor\\ckeditor-balloon.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\ckeditor\\ckeditor-classic.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\ckeditor\\ckeditor-classic.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\ckeditor\\ckeditor-document.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\ckeditor\\ckeditor-document.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\ckeditor\\ckeditor-inline.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\ckeditor\\ckeditor-inline.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\cookiealert\\cookiealert.bundle.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\cookiealert\\cookiealert.bundle.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\cookiealert\\cookiealert.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\cookiealert\\cookiealert.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\cropper\\cropper.bundle.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\cropper\\cropper.bundle.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\cropper\\cropper.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\cropper\\cropper.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\datatables\\datatables.bundle.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\datatables\\datatables.bundle.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\datatables\\datatables.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\datatables\\datatables.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\draggable\\draggable.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\draggable\\draggable.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\flotcharts\\flotcharts.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\flotcharts\\flotcharts.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\formrepeater\\formrepeater.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\formrepeater\\formrepeater.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\fslightbox\\fslightbox.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\fslightbox\\fslightbox.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\fullcalendar\\fullcalendar.bundle.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\fullcalendar\\fullcalendar.bundle.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\fullcalendar\\fullcalendar.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\fullcalendar\\fullcalendar.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\jkanban\\jkanban.bundle.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\jkanban\\jkanban.bundle.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\jkanban\\jkanban.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\jkanban\\jkanban.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\jstree\\images\\jstree\\32px.png",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\jstree\\images\\jstree\\32px.png"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\jstree\\images\\jstree\\throbber.gif",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\jstree\\images\\jstree\\throbber.gif"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\jstree\\jstree.bundle.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\jstree\\jstree.bundle.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\jstree\\jstree.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\jstree\\jstree.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\prismjs\\prismjs.bundle.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\prismjs\\prismjs.bundle.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\prismjs\\prismjs.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\prismjs\\prismjs.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\dark\\content.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\dark\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\dark\\content.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\dark\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\default\\content.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\default\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\default\\content.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\default\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\document\\content.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\document\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\document\\content.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\document\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\tinymce-5-dark\\content.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\tinymce-5-dark\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\tinymce-5-dark\\content.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\tinymce-5-dark\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\tinymce-5\\content.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\tinymce-5\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\tinymce-5\\content.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\tinymce-5\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\writer\\content.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\writer\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\content\\writer\\content.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\content\\writer\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\content.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\content.inline.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\content.inline.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\content.inline.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\content.inline.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\content.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\skin.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\skin.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\skin.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\skin.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\skin.shadowdom.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\skin.shadowdom.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\skin.shadowdom.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide-dark\\skin.shadowdom.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\content.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\content.inline.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\content.inline.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\content.inline.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\content.inline.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\content.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\skin.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\skin.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\skin.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\skin.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\skin.shadowdom.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\skin.shadowdom.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\skin.shadowdom.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\oxide\\skin.shadowdom.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\content.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\content.inline.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\content.inline.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\content.inline.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\content.inline.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\content.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.shadowdom.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.shadowdom.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.shadowdom.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.shadowdom.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\content.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\content.inline.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\content.inline.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\content.inline.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\content.inline.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\content.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\skin.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\skin.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\skin.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\skin.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\skin.shadowdom.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\skin.shadowdom.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\skin.shadowdom.min.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\skins\\ui\\tinymce-5\\skin.shadowdom.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\tinymce\\tinymce.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\tinymce\\tinymce.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\typedjs\\typedjs.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\typedjs\\typedjs.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\vis-timeline\\vis-timeline.bundle.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\vis-timeline\\vis-timeline.bundle.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\custom\\vis-timeline\\vis-timeline.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\custom\\vis-timeline\\vis-timeline.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\@fortawesome\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\bootstrap-icons\\bootstrap-icons.woff",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\bootstrap-icons\\bootstrap-icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\bootstrap-icons\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\bootstrap-icons\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-duotone.eot",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-duotone.eot"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-duotone.svg",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-duotone.svg"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-duotone.ttf",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-duotone.ttf"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-duotone.woff",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-duotone.woff"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-outline.eot",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-outline.eot"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-outline.svg",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-outline.svg"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-outline.ttf",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-outline.ttf"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-outline.woff",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-outline.woff"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-solid.eot",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-solid.eot"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-solid.svg",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-solid.svg"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-solid.ttf",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-solid.ttf"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-solid.woff",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\keenicons\\keenicons-solid.woff"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-brands-400.eot",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-brands-400.svg",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-brands-400.woff",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-regular-400.eot",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-regular-400.svg",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-regular-400.woff",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-solid-900.eot",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-solid-900.svg",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-solid-900.woff",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\fonts\\line-awesome\\la-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\fonts\\line-awesome\\la-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\plugins.bundle.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\plugins.bundle.css"
+    },
+    {
+      "Id": "C:\\Users\\umut\\Desktop\\FinanceManagement\\src\\FinanceManagement.API\\wwwroot\\assets\\plugins\\global\\plugins.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\global\\plugins.bundle.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FinanceManagement.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FinanceManagement.API.props",
+      "PackagePath": "build\\FinanceManagement.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FinanceManagement.API.props",
+      "PackagePath": "buildMultiTargeting\\FinanceManagement.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FinanceManagement.API.props",
+      "PackagePath": "buildTransitive\\FinanceManagement.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

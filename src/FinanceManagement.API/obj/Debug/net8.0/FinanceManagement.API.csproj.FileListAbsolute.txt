@@ -155,3 +155,5 @@ C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\FinanceManagement.API.pdb
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\FinanceManagement.API.genruntimeconfig.cache
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\ref\FinanceManagement.API.dll
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\FinanceManagement.API.RazorAssemblyInfo.cache
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.API\obj\Debug\net8.0\FinanceManagement.API.RazorAssemblyInfo.cs

@@ -13,3 +13,4 @@ C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\De
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\refint\FinanceManagement.Application.dll
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\FinanceManagement.Application.pdb
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\ref\FinanceManagement.Application.dll
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Application\obj\Debug\net8.0\FinanceManagement.Application.sourcelink.json

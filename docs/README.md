@@ -117,48 +117,6 @@ erDiagram
     }
 ```
 
-## 🧪 Testler
 
-```bash
-# Birim testlerini çalıştır
-cd tests/FinanceManagement.UnitTests
-dotnet test
 
-# Entegrasyon testlerini çalıştır
-cd ../FinanceManagement.IntegrationTests
-dotnet test
-```
 
-## 🐳 Docker ile Çalıştırma
-
-```bash
-# Docker imajını oluştur
-docker build -t finance-management .
-
-# Konteynerı başlat
-docker run -d -p 8080:80 --name finance-app finance-management
-```
-
-## 📝 Lisans
-
-MIT Lisansı - Detaylar için `LICENSE` dosyasına bakınız.
-
-## ✨ Katkıda Bulunma
-
-1. Fork'layın
-2. Özellik dalı oluşturun (`git checkout -b feature/AmazingFeature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`)
-4. Dalınıza push yapın (`git push origin feature/AmazingFeature`)
-5. Pull Request açın
-
-## 📞 İletişim
-
-Proje sahibi: [İsminiz]  
-E-posta: email@example.com  
-Proje Linki: [GitHub Repo URL]
-
----
-
-<div align="center">
-  Made with ❤️ by [Your Name]
-</div>

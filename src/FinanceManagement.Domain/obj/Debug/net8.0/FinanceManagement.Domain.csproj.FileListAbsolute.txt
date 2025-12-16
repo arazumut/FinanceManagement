@@ -10,3 +10,4 @@ C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Domain\obj\Debug\n
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Domain\obj\Debug\net8.0\refint\FinanceManagement.Domain.dll
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Domain\obj\Debug\net8.0\FinanceManagement.Domain.pdb
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Domain\obj\Debug\net8.0\ref\FinanceManagement.Domain.dll
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Domain\obj\Debug\net8.0\FinanceManagement.Domain.sourcelink.json

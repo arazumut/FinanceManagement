@@ -17,3 +17,4 @@ C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceManagement.Infrastructure.pdb
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceManagement.Infrastructure.genruntimeconfig.cache
 C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\ref\FinanceManagement.Infrastructure.dll
+C:\Users\umut\Desktop\FinanceManagement\src\FinanceManagement.Infrastructure\obj\Debug\net8.0\FinanceManagement.Infrastructure.sourcelink.json
